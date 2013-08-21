@@ -9,7 +9,7 @@ fieldset.form-fieldset div.field-wrapper label {
 }
 fieldset.form-fieldset .required label { 
     padding-top: 5px;
-    background: url('../media/img/icons/asterisk.png') no-repeat top right;
+    background: url('../img/icons/asterisk.png') no-repeat top right;
 }
 fieldset.form-fieldset .field textarea{height:75px; width: 300px;}
 fieldset.form-fieldset div.field-wrapper .help-text, .field-wrapper .help-text{ 
@@ -19,7 +19,7 @@ fieldset.form-fieldset div.field-wrapper .help-text, .field-wrapper .help-text{
 }
 fieldset.form-fieldset div.field-wrapper .help-icon, .field-wrapper .help-icon{
     display: inline-block; height: 16px; width: 16px;margin-left: 10px;
-    background: url('../media/img/icons/help.png') center center no-repeat;    
+    background: url('../img/icons/help.png') center center no-repeat;    
 }
 fieldset.form-fieldset div.field-wrapper .help-icon:hover .help-text, 
 .field-wrapper .help-icon:hover .help-text{ display:inline-block; }
