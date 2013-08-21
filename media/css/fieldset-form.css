@@ -1,0 +1,34 @@
+/*** FIELDSET FORM ***/
+fieldset.form-fieldset{ display: block; clear:both; width: 100%; margin: 0; padding:0; border:none;}
+fieldset.form-fieldset legend{ width: 100%; margin: 0; padding: 0; border-top: 1px solid #ececec; }
+fieldset.form-fieldset legend span{ display: block; font-size:16px; font-weight:bold; padding: 5px 0 5px 20px; }
+fieldset.form-fieldset div.field-wrapper{ margin: 10px 30px; padding: 10px 0 5px 0;}
+fieldset.form-fieldset div.field-wrapper label { 
+    font-size: 12px; text-transform:uppercase; margin: 0px; padding-right: 12px; 
+    float: left; width: 160px; text-align: right; margin-right: 30px;
+}
+fieldset.form-fieldset .required label { 
+    padding-top: 5px;
+    background: url('../media/img/icons/asterisk.png') no-repeat top right;
+}
+fieldset.form-fieldset .field textarea{height:75px; width: 300px;}
+fieldset.form-fieldset div.field-wrapper .help-text, .field-wrapper .help-text{ 
+    font-size: 11px; font-style: italic; background-color: white;
+    display: none; position: absolute; margin-left: 25px;
+    min-width: 100px; padding: 5px; border: 1px solid black;
+}
+fieldset.form-fieldset div.field-wrapper .help-icon, .field-wrapper .help-icon{
+    display: inline-block; height: 16px; width: 16px;margin-left: 10px;
+    background: url('../media/img/icons/help.png') center center no-repeat;    
+}
+fieldset.form-fieldset div.field-wrapper .help-icon:hover .help-text, 
+.field-wrapper .help-icon:hover .help-text{ display:inline-block; }
+
+fieldset.form-fieldset div.field-wrapper div.field { float: left; max-width: 480px; }
+fieldset.form-fieldset div.field label { width: auto; margin-bottom:10px;}
+
+fieldset.form-fieldset div.field ul { list-style : none; }
+fieldset.form-fieldset div.field-wrapper div.field span.current { margin-right: 10px; }
+div.submit-wrapper{ margin-left: 210px; padding: 10px 0 10px 20px; }
+fieldset.form-fieldset .errors{display:block; clear:both; margin-left:200px}
+fieldset.form-fieldset .errors ul{padding-top: 1px;}
