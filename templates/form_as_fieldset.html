@@ -1,0 +1,40 @@
+{% load fieldset_form.py %}
+
+{% if form.non_field_errors %}
+    <div class="non-field-errors">{{form.non_field_errors }}</div>
+{% endif %}
+{% for item in fieldsets %}
+<fieldset name="{{item.0}}" class="form-fieldset">
+    {% if item.0 %}<legend><span>{{item.0|strongify|safe}}</span></legend>{% endif %}
+    {% for formfield in item.1 %}
+        {% with form|get_form_field:formfield as field %}
+            <div class="field-wrapper {{field.name}}-wrapper{% if field.is_hidden %} hidden{% endif %}{% if field.field.required %} required{% endif %}">
+            {% if field|field_type == 'checkbox' or field|field_type == 'radio' %}
+                <span class="{{field.name}} field">{{ field }}</span>
+                {{ field.label_tag }}
+                {% if field.help_text|safe %}
+                    <span class="help-icon">
+                        <span class="{{field.name}} help-text">{{field.help_text}}</span>
+                    </span>
+                {% endif %}
+            {% else %}
+                {{ field.label_tag }}
+                {% if field.help_text|safe %}
+                    <span class="help-icon">
+                        <span class="{{field.name}} help-text">{{field.help_text}}</span>
+                    </span>
+
+                {% endif %}
+                <div class="{{field.name}} field">{{ field }}</div>
+            {% endif %}
+            <span class="{{field.name}} errors">{{ field.errors }} </span>
+
+            </div>
+        {% endwith %}
+    {% endfor %}
+    <div class="clear"></div>
+</fieldset>
+{% endfor %}
+
+<!-- Zen code : fieldset.form-fieldset>((legend>span)+(div.field-wrapper>(label+div.field+span.errors+span.help-text))+div.clear) -->
+
